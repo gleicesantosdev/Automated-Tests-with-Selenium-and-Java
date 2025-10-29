@@ -9,7 +9,7 @@ public abstract class BaseTest {
     //nao pode ser instanciada, somente herdada
 
     protected static WebDriver driver;
-    private static final String URL_BASE = "http://www.google.com";
+    private static final String URL_BASE = "https://www.google.com/?hl=pt_BR";
 
 
     @BeforeClass //chamada antes de qualquer outro metodo de teste
@@ -17,11 +17,6 @@ public abstract class BaseTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(URL_BASE);
-    }
-
-    @AfterClass //roda depois de todos os testes
-    public static void finalizar(){
-        driver.quit();
     }
 
 
